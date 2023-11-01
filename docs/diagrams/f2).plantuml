@@ -1,0 +1,143 @@
+@startuml f2
+object "V:Equipo_de_voleyball" as o1{
+    nombre = Venezuela
+    registro = 15
+}
+object "C:Equipo_de_voleyball" as o2{
+    nombre = Chile
+    registro = 16
+}
+object "J1:Juego" as o3{
+    localidad = Santiago
+    puntuacion = 3-0
+}
+object "P1:jugador" as o4 {
+    telefono = 000000
+    nombre =  carlos 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =colocador
+}
+object "P2:jugador" as o15 {
+    telefono = 000000
+    nombre =  jose 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =punta
+}
+object "P3:jugador" as o5 {
+    telefono = 000000
+    nombre =  brayant 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =opuesto
+}
+object "P4:jugador" as o6 {
+    telefono = 000000
+    nombre =  estevan 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =central
+}
+object "P5:jugador" as o7 {
+    telefono = 000000
+    nombre =  jesus 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =libero
+}
+object "P6:Capitan" as o8 {
+    telefono = 000000
+    nombre =  angel 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =colocador
+}
+object "P7:jugador" as o9 {
+    telefono = 000000
+    nombre =  maikol 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =opuesto
+}
+object "P8:jugador" as o10 {
+    telefono = 000000
+    nombre =  moises 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =central
+}
+object "P9:jugador" as o11 {
+    telefono = 000000
+    nombre =  john 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =libero
+}
+object "P10:jugador" as o12 {
+    telefono = 000000
+    nombre =  lucas 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =colocador
+}
+object "P11:jugador" as o13 {
+    telefono = 000000
+    nombre =  keisi 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =libero
+}
+object "P12:Capitan" as o14 {
+    telefono = 000000
+    nombre =  ramiro 
+    direccion = xxxxxxx
+    numero = 1
+    posicion =punta
+}
+
+object "E1:Entrenador" as o16 {
+    telefono = 000000
+    nombre =  ramiro 
+    direccion = xxxxxxx
+    nivel = medio 
+    expeirencia = 4
+}
+
+object "E2:Entrenador" as o17 {
+    telefono = 000000
+    nombre =  ramiro 
+    direccion = xxxxxxx
+    nivel = medio 
+    experiencia = 5
+}
+
+o1 -- o3: donde transcurre el juego
+o2 -- o3: donde transcurre el juego
+o4 -- o1: equipo donde juegan
+o5 -- o1
+o6 -- o1
+o7 -- o1
+o8 -- o1
+o9 -- o1
+o10 -- o2:equipo donde juegan
+o11 -- o2
+o12 -- o2
+o13 -- o2
+o14 -- o2
+o15 -- o2
+o16 -- o1: entrena al equipo
+o17 -- o2: entrena al eqiupo
+o14 -- o10: el capitan tiene mas peso que el resto de compañeros
+o14 -- o11
+o14 -- o12
+o14 -- o13
+o14 -- o15
+o8--o4: el capitan tiene mas peso que el resto de compañeros
+o8--o5
+o8--o6 
+o8--o7 
+o8--o9
+
+
+@enduml

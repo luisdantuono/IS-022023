@@ -1,0 +1,32 @@
+@startuml f
+class Equipo_de_voleyball{
+    nombre=string
+    registro=string
+}
+abstract class Persona{
+    telefono=string
+    nombre=string
+    direccion=string
+} 
+class Juego{
+    localidad = string
+    puntuacion = string
+}
+class Entrenador{
+    nivel = string
+    experiencia = int
+}
+class Jugador{
+    numero = int
+    posicion = string
+}
+class Capitan{}
+Equipo_de_voleyball o-- "6..20" Jugador
+Equipo_de_voleyball "juegan en"-- Juego
+Equipo_de_voleyball "1..*" o-- "1" Entrenador
+Equipo_de_voleyball o-- "1" Capitan
+Persona <|-- Jugador 
+Persona <|-- Entrenador 
+Jugador <|-- Capitan
+
+@enduml

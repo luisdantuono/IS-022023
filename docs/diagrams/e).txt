@@ -1,0 +1,16 @@
+1) respuesta: quiere decir que cualquier cambio en controller
+o en los paquetes de los que depende "controller" afectara de alguna forma
+a el paquete "top"
+
+2) respuesta:
+ 2a) tiene 6 dependencias
+ 2b) tiene 3 de entrada (que dependen de el)
+ y 3 de salida (que el depende de ellos)
+ 3c) si se hace un cambio en una de las clases de "theads"
+ los 3 paquetes que dependen de el probablemente sufran cambios
+ tambien
+
+ 3) respuesta:
+ 3a) su nivel de acoplamiento entre paquetes es alto
+ 3b) es malo, porque para cambiar una cosa en un lado,
+ probablementevas a tener que cambiar varias en otro lado 

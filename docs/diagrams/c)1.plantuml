@@ -1,0 +1,12 @@
+
+@startuml c1
+class Poligono{}
+class Punto{
+    cord_x = int
+    cord_y = int
+}
+
+Poligono "1"--"3..*" Punto
+
+
+@enduml

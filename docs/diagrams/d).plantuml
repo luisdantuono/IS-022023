@@ -1,0 +1,27 @@
+@startuml d
+object "T:Termino" as  o1
+object "E1:Expresion" as o2{
+    -operador_binario=+
+}
+object "E2:Expresion" as o3{
+    -operador_binario=/
+}
+object "V1:Variable" as o4{
+    -nombre=x
+}
+object "V2:Variable" as o5{
+    -nombre=y
+}
+object "C1:Constante" as o6{
+    -valor= 0
+}
+object "E2:Expresion" as o7{
+    -operador_binario=+
+}
+o2 o-- o1
+o3 o-- o1
+o7 o-- o1
+o1 -- o4
+o1--o5
+o1--o6
+@enduml

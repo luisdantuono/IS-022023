@@ -1,0 +1,147 @@
+@startuml b
+skinparam classAttributeIconSize 0
+abstract class teclado{
+
+}
+class tecla{
+
+}
+teclado "1"*-- "105..*" tecla
+
+abstract class persona{
+    -nombre: string
+    -edad: int
+    -sexo: char 
+}
+
+class estudiante{
+    -estudiar()
+}
+
+class profesor{
+    -enseñar()
+}
+
+class empleado{
+    -trabajar()
+}
+
+persona <|-- estudiante
+persona <|-- profesor
+persona <|-- empleado
+class disco_duro{
+-informacion: int
++almacenar()
+}
+class pista{}
+class sector{}
+disco_duro "1"*--"1..*"pista
+pista "1"*--"1..*"sector
+
+abstract class poligono{
+    -centrox: int
+    -centroy: int
+    +modificarcentrox()
+    +modificarcentroy()
+}
+class triangulo{}
+class lado{
+    -iniciox: int
+    -inicioy: int
+    -finalx: int
+    -finaly: int
+    +modificariniciox()
+    +modificarinicioy()
+    +modificarfinalx()
+    +modificarfinaly()
+}
+poligono <|-- triangulo
+triangulo "1"*--"3"lado
+
+class equipo_baseball{
+-nombre: string
+-fundacion: string
+}
+class jugadores{
+    -nombre: string
+    -edad: string
+    -posicion: string
+    -jugar()
+}
+class estadio{
+    nombre: string
+    capacidad: string
+}
+equipo_baseball "1" o-- "26..*" jugadores
+equipo_baseball "1" o-- "1..*" estadio
+
+class comite {
+    -labor: string
+    -ejecutar_labor()
+}
+class coordinador{
+    -coordinar()
+}
+comite "1" o-- "2..*" persona
+persona <|-- coordinador
+comite "1..*" *-- "1" coordinador
+class criterio{}
+class caracterizacion{}
+class elemento_clasificado{}
+criterio "1..*" *-- "1" caracterizacion 
+caracterizacion "1" *-- "1" elemento_clasificado
+
+abstract class laboratorio{}
+class laboratorio_nuclear{}
+abstract class equipo{}
+class equipo_nuclear{}
+
+laboratorio <|-- laboratorio_nuclear
+equipo <|-- equipo_nuclear
+laboratorio_nuclear "1" *-- "1..*" equipo_nuclear
+
+class FP{}
+class UFC{}
+class TCF{}
+class Fi{}
+
+FP o-- UFC
+FP o-- TCF
+Fi "14" *-- "1" TCF
+
+abstract class trabajo_de_investigacion
+class TEG{}
+class TGM{}
+trabajo_de_investigacion <|-- TEG
+trabajo_de_investigacion <|-- TGM
+class tutor{}
+profesor<|--tutor
+trabajo_de_investigacion "1..*" *-- "1..2" tutor 
+class postgrado{}
+class pregrado{}
+estudiante<|--postgrado
+estudiante<|--pregrado
+TGM "1" o-- "1" postgrado
+TEG "1" o-- "1..2" pregrado
+
+class documento_grafico{}
+class hoja{}
+class objeto_dibujo{}
+class texto{}
+class figura_2D{}
+class grupo{}
+class circulo{}
+class cuadrado{}
+
+documento_grafico "1" o-- "1..*" hoja
+hoja "1" o-- "1" objeto_dibujo
+objeto_dibujo<|-- texto
+objeto_dibujo<|-- figura_2D
+objeto_dibujo<|-- grupo
+grupo "1" o-- "2..*" objeto_dibujo
+figura_2D<|-- circulo
+figura_2D<|--cuadrado
+
+
+
+@enduml

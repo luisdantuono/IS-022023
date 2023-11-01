@@ -1,0 +1,57 @@
+@startuml c2
+object "T1:Poligono" as o1
+
+object "T2:Poligono" as o2
+
+object ":Punto" as o3{
+    cord_x =0
+    cord_y=0
+}
+object ":Punto" as o4{
+    cord_x =10
+    cord_y= 0
+}
+object ":Punto" as o5{
+    cord_x =10
+    cord_y= 10
+}
+object ":Punto" as o6{
+    cord_x =-5
+    cord_y= 0
+}
+
+object ":Punto" as o7{
+    cord_x =-5
+    cord_y= -5
+}
+
+
+
+
+o1--o3
+o1--o4
+o1--o5
+o2--o3
+o2--o6
+o2--o7
+
+object "C:Poligono" as o8
+object ":Punto" as o9{
+    cord_x =1
+    cord_y= 0
+}
+object ":Punto" as o10{
+    cord_x =0
+    cord_y= 1
+}
+object ":Punto" as o11{
+    cord_x =1
+    cord_y= 1
+}
+
+o8--o3
+o8--o9
+o8--o10
+o8--o11
+
+@enduml
